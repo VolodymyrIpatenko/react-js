@@ -6,10 +6,10 @@ const UserInfo = props => {
 		<div className="user-info">
 			<img
 				className="avatar"
-				src={props.avatarUrl}
-				alt={props.name}
+				src={props.user.avatarUrl}
+				alt={props.user.name}
 			/>
-			<div className="user-info__name">{props.name}</div>
+			<div className="user-info__name">{props.user.name}</div>
 		</div>
 	);
 };
