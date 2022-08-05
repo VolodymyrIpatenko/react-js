@@ -5,15 +5,15 @@ import UserInfo from "./UserInfo";
 
 const formatDate = date => moment(date).format("DD MMM YYYY");
 
-function Comment(author) {
+function Comment(props) {
   return (
 		<div className="comment">
-			<UserInfo author={author.user} />
+			<UserInfo author={props.author.user} />
 			<div className="comment__text">
-				{author.text}
+				{props.author.text}
 			</div>
 			<div className="comment__date">
-				{formatDate(author.date)}
+				{formatDate(props.author.date)}
 			</div>
     </div>
   );
