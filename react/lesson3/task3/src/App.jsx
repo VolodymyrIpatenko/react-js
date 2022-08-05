@@ -9,7 +9,7 @@ const UserInfo = {
 const App = () => {
 	return (
 		<Comment
-			user={UserInfo}
+			author={UserInfo}
 			text="Good job!"
 			date={new Date("2022-01-01T11:32:19.566Z")}
 		/>
