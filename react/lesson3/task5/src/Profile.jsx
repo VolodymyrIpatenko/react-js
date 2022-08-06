@@ -4,10 +4,17 @@ import "./index.scss";
 
 const formatDate = date => moment('1991-01-17T11:11:11.819Z').format("DD MMM YYYY");
 
-export default userData => {
-  return (
+function Profile (userData)  {
+	return (
+		<div>
     <div className="profile__name">
-      {userData.firstName} {userData.lastName}. Was born {formatDate(userData.birthDate)} in {userData.birthPlace}
-    </div>
+			{userData.firstName} {userData.lastName}
+		</div>
+		<div className="profile__birth">
+			Was born {formatDate(userData.birthDate)} in {userData.birthPlace}
+			</div>
+			</div>
   );
 };
+
+export default Profile;
