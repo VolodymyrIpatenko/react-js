@@ -5,5 +5,5 @@ import Greeting from "./Greeting.jsx";
 
 const rootElement = document.querySelector('#root');
 	
- ReactDOM.render(<Greeting/>, rootElement);
+ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="17" />, rootElement);
  
