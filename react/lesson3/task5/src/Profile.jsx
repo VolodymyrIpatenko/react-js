@@ -1,20 +1,17 @@
 import React from 'react';
-import moment from "moment";
-import "./index.scss";
+import moment from 'moment';
 
-const formatDate = date => moment('1991-01-17T11:11:11.819Z').format("DD MMM YYYY");
+const formatDate = date => moment(date).format('DD MMM YY');
 
-function Profile (userData)  {
-	return (
-		<div>
-    <div className="profile__name">
-			{userData.firstName} {userData.lastName}
-		</div>
-		<div className="profile__birth">
-			Was born {formatDate(userData.birthDate)} in {userData.birthPlace}
-			</div>
-			</div>
+ function Profile(props) {
+  return (
+    <div>
+      <p className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</p>
+      <p className="profile__birth">
+        {`Was born ${formatDate(props.userData.birthDate)} in ${props.userData.birthPlace}`}
+      </p>
+    </div>
   );
-};
+}
 
 export default Profile;

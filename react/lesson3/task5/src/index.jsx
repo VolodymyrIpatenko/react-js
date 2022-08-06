@@ -1,23 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Profile from './Profile.jsx';
+import Profile from './profile';
+
+const rootElement = document.querySelector('#root');
 
 const userData = {
-  firstName: 'James',
-  lastName: 'Bond',
+  firstName: 'John',
+  lastName: 'Doe',
   birthDate: '1991-01-17T11:11:11.819Z',
   birthPlace: 'London',
 };
 
-
-const rootElement = document.querySelector('#root');
-
-ReactDOM.render(
-	<Profile
-		firstName="James"
-		lastName="Bond"
-		birthPlace="London"
-  />,
-  rootElement,
-);
+ReactDOM.render(<Profile userData={userData} />, rootElement);
