@@ -5,7 +5,7 @@ class Counter extends Component {
 	constructor() {
 		super();
 		this.state = {
-			counter: 0,
+			counter: 17,
 		};
 
 		setInterval(() => {
