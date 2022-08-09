@@ -25,22 +25,22 @@ class Auth extends Component {
 	
 	render() {
 		return (
-			<>
+			<div className="status">
 			<Status isLoggedIn={this.state.isLoggedIn} />
 				{this.state.isLoggedIn ? (
-					<div className="status">
+					<>
 				    <span className="status__text">Offline</span>
 						<button onClick={this.handleLogout} className="status__btn">Reconnect</button>
-					</div>
+					</>
 				)
 					:(
-					<div className="status">
+					<>
 				    <span className="status__text">Online</span>
 						<button onClick={this.handleLogin} className="status__btn">All good!</button>
-					</div>
+					</>
 				)
 					}
-					</>
+					</div>
 					);
 				}
 			}
