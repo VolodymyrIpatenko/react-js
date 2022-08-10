@@ -1,12 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
 
 export default class Online extends React.Component {
-   render() {
-    return (
-      <div className="status">
-        <span className="status__text">Online</span>
-        <button className="status__btn">All good!</button>
-      </div>
-    );
+  render() {
+    return <span className="status__text">All good!</span>;
   }
 }
