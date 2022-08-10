@@ -1,13 +1,12 @@
-import React from 'react';
- 
-const Online = () => {
-	return (
-		<>
-			<span class="status__text">Online</span>
-			<button class="status__btn">All good!</button>
-		</>
-	)
-};
+import React,{Component} from 'react';
 
-
-export default Online;
+export default class Online extends React.Component {
+   render() {
+    return (
+      <div className="status">
+        <span className="status__text">Online</span>
+        <button className="status__btn">All good!</button>
+      </div>
+    );
+  }
+}

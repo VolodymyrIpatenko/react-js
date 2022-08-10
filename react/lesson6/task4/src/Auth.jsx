@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Status from './Status.jsx';
+import Online from './Online.jsx';
+import Offline from './Offline.jsx';
 
 class Auth extends Component {
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
-			isLoggedIn: false,
-		};
+    isOnline: true,
+    isOffline: false,
+  };
 	}
 	
 	handleLogin = () => {
@@ -25,24 +28,11 @@ class Auth extends Component {
 	
 	render() {
 		return (
-			<div className="status">
-			<Status isLoggedIn={this.state.isLoggedIn} />
-				{this.state.isLoggedIn ? (
-					<>
-				    <span className="status__text">Offline</span>
-						<button onClick={this.handleLogout} className="status__btn">Reconnect</button>
-					</>
-				)
-					:(
-					<>
-				    <span className="status__text">Online</span>
-						<button onClick={this.handleLogin} className="status__btn">All good!</button>
-					</>
-				)
-					}
-					</div>
-					);
-				}
-			}
-			
-			export default Auth;
+			<>
+			{this.state.isOnline && <Online />} {!this.state.isOffline && <Offline />}
+			</>
+			);
+		}
+	}
+	
+	export default Auth;
