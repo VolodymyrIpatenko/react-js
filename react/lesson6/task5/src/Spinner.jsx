@@ -7,4 +7,5 @@ const Spinner = ({ size }) => {
   return <Logout />;
 };
 
+
 export default Spinner;

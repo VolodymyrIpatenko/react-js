@@ -22,7 +22,7 @@ export default class Auth extends React.Component {
 	render() {
 		return (
 			<div className="panel">
-				<Spinner isLoggedIn={this.state.isLoggedIn} />
+				<Spinner size={this.state.isLoggedIn} />
 				{this.state.isLoggedIn ? (
 					<Logout onLogout={this.logoutHandler} />
 				) : (
