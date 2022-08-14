@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class ConnectionStatus extends Component {
 	state = {
-		online:true,
+		online: true,
+		offline: true,
 	}
 
 	componentDidMount() {
@@ -24,12 +25,12 @@ class ConnectionStatus extends Component {
 	}
 	
 	componentWillUnmount() {
-		window.removeEventListener("online", this.isOnline);
+		window.removeEventListener("offline", this.isOnline);
 	}
 
 	render() {
-			const { online } = this.state;
-			if (this.state.online) {
+			const { online, offline} = this.state;
+			if (this.state.offline) {
 				return (
 					 <div className="status status_offline">Offline</div>
 				)
