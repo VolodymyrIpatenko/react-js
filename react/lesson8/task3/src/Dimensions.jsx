@@ -14,7 +14,7 @@ class Dimension extends Component {
 
 	onResize = e => {
 		const { innerWidth, innerHeight } = e.target;
-		setDimensions(innerWidth, innerHeight);
+		this.setDimensions(innerWidth, innerHeight);
 	}
 
 	setDimensions = (width, height) => {
@@ -22,7 +22,7 @@ class Dimension extends Component {
 			width,
 			height,
 		});
-		document.title=`${innerWidth}x${innerHeight}`;
+		document.title=`${innerWidth} x ${innerHeight}`;
 	}
 
 	componentWillUnmount() {
