@@ -14,7 +14,7 @@ class Dimensions extends Component {
 
 	onResize = e => {
 		const { innerWidth, innerHeight } = e.target;
-		this.setDimensions(innerWidth, innerHeight);
+		this.setDimensions(innerWidth, innerHeight)
 	}
 
 	setDimensions = (width, height) => {
@@ -31,7 +31,7 @@ class Dimensions extends Component {
 
 	render() {
 		return <div className="dimensions">
-			{`${this.state.width}px - ${this.state.height}px`};
+			{`${this.state.width}px - ${this.state.height}px`}
 		</div>
 	}
 }
