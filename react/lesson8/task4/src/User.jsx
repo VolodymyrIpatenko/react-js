@@ -32,7 +32,7 @@ class User extends Component {
 					alt="User Avatar" className="user__avatar" />
 				<div className="user__info">
 					<span className="user__name">{name}</span>
-					<span className="usewr__location">{location}</span>
+					<span className="user__location">{location}</span>
 				</div>
 			</div>
 		);
