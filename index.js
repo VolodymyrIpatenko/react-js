@@ -16,3 +16,28 @@ for (let i = 1; i <= 10; i += 1) {
   foo(i);
   // time += 1000;
 }
+
+/////
+function flatten(arrr) {
+  return arrr.reduce(
+    (acc, cur) => acc.concat(Array.isArray(cur) ? flatten(cur) : cur),
+    []
+  );
+}
+
+const arrr = [
+  [1, 2],
+  [3, [4, [5]]],
+];
+
+const flattened = flatten(arrr);
+console.log(flattened);
+////////////
+
+const arrTwo = [
+  [1, 2],
+  [3, [4, [5]]],
+];
+
+const flattenedTwo = arrTwo.flat(Infinity);
+console.log(flattenedTwo);

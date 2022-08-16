@@ -50,7 +50,7 @@ class UserForm extends Component {
 						name="about"
 						className="form-input"
 					  onChange={this.handleChange}  
-					></textarea>
+					/>
 				</div>
 				<button className="submit-button" type="submit">Submit</button>
 			</form>

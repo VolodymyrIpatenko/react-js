@@ -5,5 +5,4 @@ import User from "./User.jsx";
 
 const rootElement = document.querySelector("#root");
 
-
-ReactDOM.render(<User userId="apple" />, rootElement );
+ReactDOM.render(<User userId="volodymyr ipatenko" />, rootElement );
