@@ -33,6 +33,7 @@ class UserForm extends Component {
 				<div className="form-control">
 					<label value={this.state.occupation} className="form-label" id="occupation" htmlFor="occupation">Occupation</label>
 					<select
+						value={this.state.occupation}
 						name="occupation"
 						className="form-input"
 					  onChange={this.handleChange}>
