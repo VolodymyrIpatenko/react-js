@@ -28,10 +28,10 @@ class UserForm extends Component {
 				</div>
 				<div className="form-control">
 					<label className="form-label" htmlFor="student">Student</label>
-					<input onChange={this.handleChange} className="form-input" type="checkbox" id="student" name="student" />
+					<input onChange={this.handleChange} value={this.state.student} className="form-input" type="checkbox" id="student" name="student" />
 				</div>
 				<div className="form-control">
-					<label value={this.state.occupation} className="form-label" id="occupation" htmlFor="occupation">Occupation</label>
+					<label className="form-label" id="occupation" htmlFor="occupation">Occupation</label>
 					<select
 						value={this.state.occupation}
 						name="occupation"
