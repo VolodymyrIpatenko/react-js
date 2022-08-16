@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-	state = {name,about,occupation,student};
+	state = {};
 	
 	handleChange = event => {
 		const { name, value, checked, type } = event.target;
