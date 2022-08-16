@@ -5,7 +5,7 @@ class Search extends Component {
 	
 	
 	handleChange = event => {
-		this.setState({ value: event.target.value });
+		this.setState({ value: event.target.value });/// handleChange записывает в state значения из Input
 	};
 	
 	search = event => {
