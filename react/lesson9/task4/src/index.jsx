@@ -1,6 +1,6 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Game from ".Game/.jsx";
-// const rootElement = document.querySelector("#root");
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Game from './Game';
+import './index.scss';
 
-// ReactDOM.render(<Game/>, rootElement );
+ReactDOM.render(<Game />, document.querySelector('#root'));
