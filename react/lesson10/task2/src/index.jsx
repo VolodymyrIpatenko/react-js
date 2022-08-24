@@ -4,4 +4,4 @@ import "./index.scss";
 import Page from "./App.jsx";
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Page />, rootElement );
+ReactDOM.render(<Page userId="nvidia" />, rootElement );

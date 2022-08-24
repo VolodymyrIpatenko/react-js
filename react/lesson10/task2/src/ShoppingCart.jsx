@@ -1,32 +1,31 @@
 import React, { Component } from 'react';
-import ProductsList from "./ProductsList.jsx";
-import CartTitle from "./CartTitle.jsx";
-
+import CartTitle from './CartTitle';
+import ProductsList from './ProductsList';
 
 class ShoppingCart extends Component {
-	state = {
-		cartItems: [
-			{
-				id: "1",
-				name: "MAC",
-				price: 999,
-			},
-			{
-				id: "2",
-				name: "IPAD",
-				price: 1000,
-			},
-		],
-	};
-	render() {
-		const count = this.state.cartItems.length;
-		return (
-			<div className="column">
-				<CartTitle userName={this.props.userData.firstName} count={count} />
-				<ProductsList cartItems={this.state.cartItems} />
-			</div>
-		);
-	}
+  state = {
+    productsList: [
+      { id: 1, name: 'Ipad Pro', price: 799 },
+      { id: 2, name: 'Iphone 13', price: 999 },
+    ],
+  };
+
+  render() {
+    const sum = this.state.productsList.reduce((acc, { price }) => acc + price, 0);
+    return (
+      <div className="column">
+        <CartTitle userName={this.props.userName} count={this.state.productsList.length} />
+        <div className="products">
+          <ul className="products__list">
+            {this.state.productsList.map(({ id, name, price }) => (
+              <ProductsList key={id} name={name} price={price} />
+            ))}
+            <div className="products__total">Total: ${sum}</div>
+          </ul>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default ShoppingCart;

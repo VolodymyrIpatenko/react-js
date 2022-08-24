@@ -18,7 +18,6 @@ const tasks = [
 ];
 
 const listElem = document.querySelector('.list');
-debugger;
 const renderTasks = tasksList => {
   listElem.innerHTML = '';
 

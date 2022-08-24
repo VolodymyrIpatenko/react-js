@@ -1,37 +1,36 @@
 import React, { Component } from 'react';
-import UserProfile from "./UserProfile";
-import UserMenu from "./UserMenu";
+import UserMenu from './UserMenu';
+import UserProfile from './UserProfile';
 
-class Page extends React.Component {
-	state = {
-		userData: null,
-	};
+class Page extends Component {
+  state = {
+    userData: null,
+  };
 
-	componentDidMount() {
-		this.fetchUserData(this.props.userId);
-	}
+  componentDidMount() {
+    this.onFetchUser(this.props.userId);
+  }
 
-	fetchUserData = userId => {
-		const userUrl = `https://api.github.com/users/${userId}`;
-		fetch(userUrl)
-			.then(response => response.json())
-			.then(userData =>
-				this.setState({
-					userData,
-				}),
-			);
-	};
+  onFetchUser = userId => {
+    const baseUrl = 'https://api.github.com/users/';
+    fetch(`${baseUrl}${userId}`)
+      .then(response => response.json())
+      .then(userData =>
+        this.setState({
+          userData,
+        }),
+      );
+  };
 
-	render() {
-		return (
-			<div className="page">
-				<header className="header">
-					<UserMenu userData={this.state.userData} />
-				</header>
-				<UserProfile userData={this.state.userData} />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="page">
+        <header className="header">
+          <UserMenu userData={this.state.userData} />
+        </header>
+        <UserProfile userData={this.state.userData} />
+      </div>
+    );
+  }
 }
-
 export default Page;
