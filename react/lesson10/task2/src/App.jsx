@@ -1,35 +1,33 @@
-import React, { Component } from 'react';
-import Profile from './Profile';
+import React from 'react';
 import ShoppingCart from './ShoppingCart';
+import Profile from './Profile';
 
-class Page extends Component {
+class Page extends React.Component {
   state = {
     userData: {
-      firstName: 'Tom',
-      lastName: 'Form',
+      firstName: 'John',
+      lastName: 'Doe',
     },
   };
 
-  onChangeText = event => {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({
       userData: {
-        // ...this.state.userData,
+        ...this.state.userData,
         [name]: value,
       },
     });
   };
 
   render() {
-    console.log(this.state);
+    const { userData } = this.state;
     return (
       <div className="page">
-        <h1 className="title">
-          Hello, {this.state.userData.firstName} {this.state.userData.lastName}
-        </h1>
+        <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
-          <ShoppingCart userName={this.state.userData.firstName} />
-          <Profile userData={this.state.userData} onChange={this.onChangeText} />
+          <ShoppingCart userName={userData.firstName} />
+          <Profile userData={userData} handleChange={this.handleChange} />
         </main>
       </div>
     );
