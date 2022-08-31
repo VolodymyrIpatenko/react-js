@@ -1,4 +1,3 @@
-'use strict';
 // let arr = [1, 2, 3, 3, 3, 3, 3];
 
 // function threeTimes(arr) {
@@ -43,9 +42,21 @@
 // const flattenedTwo = arrTwo.flat(Infinity);
 // console.log(flattenedTwo);
 
-console.time('dcode');
-let n = 0;
-for (let i = 0; i < 10000000; i += 1) {
-  n += i;
+// console.time('dcode');
+// let n = 0;
+// for (let i = 0; i < 10000000; i += 1) {
+//   n += i;
+// }
+// console.timeEnd('dcode');
+
+var funcs;
+
+for (var i = 0; i < 3; i++) {
+  funcs = function () {
+    console.log('Value: ' + i);
+  };
 }
-console.timeEnd('dcode');
+for (var j = 0; j < 3; j++) {
+  // funcs();
+}
+funcs();

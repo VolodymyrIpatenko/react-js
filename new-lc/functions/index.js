@@ -35,3 +35,16 @@ const validator2 = validate(checkTerms, checkAge);
 
 console.log(validator1(user));
 console.log(validator2(user2));
+
+function calculate(...a) {
+  return function (...b) {
+    return [...a, ...b].reduce((sum, n) => sum + n);
+  };
+}
+
+console.log(calculate(0, 3)(1, 1));
+
+function func() {}
+const arrowFunc = () => {};
+console.dir(arrowFunc);
+console.dir(func);
