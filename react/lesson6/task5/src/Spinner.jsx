@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Spinner = ({ size }) => {
-  if (size) {
-    return <Login />;
-  }
-  return <Logout />;
-};
+const Spinner = ({ size }) => (
+   <span className="spinner" style={{ width: size, height: size }}></span>
+)
+  
 
 
 export default Spinner;
